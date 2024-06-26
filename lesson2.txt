@@ -1,0 +1,152 @@
+# a = int(input("Введіть число: "))
+
+# if a % 2 == 0:
+#     print(f"{a} - Even number")
+# else:
+#     print(f"{a} - Odd number")
+
+
+# b = int(input("Введіть число: "))
+# if b % 7 == 0:
+#     print(f"{b} - Number is a multiple of 7")
+# else:
+#     print(f"{b} - Number is not a multiple of 7")
+
+
+# number1 = int(input("Введіть перше число: "))
+# number2 = int(input("Введіть друге число: "))
+# if number1 > number2:
+#     print(f"Більше число: {number1}")
+# elif number2 > number1:
+#     print(f"Більше число: {number2}")
+# else:
+#     print("Числа рівні")
+
+
+# number1 = int(input("Введіть перше число: "))
+# number2 = int(input("Введіть друге число: "))
+# minimum = min(number1, number2)
+# print(f"Мінімальне число: {minimum}")
+
+
+# number1 = float(input("Введіть перше число: "))
+
+
+# number2 = float(input("Введіть друге число: "))
+
+# print("Виберіть операцію:")
+# print("1. Сума")
+# print("2. Різниця")
+# print("3. Середньоарифметичне")
+# print("4. Добуток")
+# choice = input("Ваш вибір (1/2/3/4): ")
+# if choice == '1':
+#     result = number1 + number2
+#     print(f"Сума: {result}")
+# elif choice == '2':
+#     result = number1 - number2
+#     print(f"Різниця: {result}")
+# elif choice == '3':
+#     result = (number1 + number2) / 2
+#     print(f"Середньоарифметичне: {result}")
+# elif choice == '4':
+#     result = number1 * number2
+#     print(f"Добуток: {result}")
+# else:
+#     print("Невірний вибір. Будь ласка, виберіть 1, 2, 3 або 4.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# seconds_since_midnight = int(input("Введіть час у секундах, що минув від початку дня: "))
+# total_seconds_in_a_day = 24 * 60 * 60
+
+# if seconds_since_midnight >= total_seconds_in_a_day:
+#     print("Введене значення перевищує кількість секунд в одному дні. Будь ласка, введіть коректне значення.")
+# else:
+#     remaining_seconds = total_seconds_in_a_day - seconds_since_midnight
+
+#     hours = remaining_seconds // 3600
+#     minutes = (remaining_seconds % 3600) // 60
+#     seconds = remaining_seconds % 60
+#     print(f"До опівночі залишилось: {hours} годин, {minutes} хвилин, {seconds} секунд")
+
+
+# diameter = float(input("Введіть діаметр кола: "))
+# print("Виберіть операцію:")
+# print("1. Площа кола")
+# print("2. Периметр кола (довжина кола)")
+# choice = input("Ваш вибір (1/2): ")
+# radius = diameter / 2
+# if choice == '1':
+#     area = math.pi * (radius ** 2)
+#     print(f"Площа кола: {area:.2f}")
+# elif choice == '2':
+#     perimeter = 2 * math.pi * radius
+#     print(f"Периметр кола (довжина кола): {perimeter:.2f}")
+# else:
+#     print("Невірний вибір. Будь ласка, виберіть 1 або 2.")
+
+
+
+
+
+
+# price_console = float(input("Введіть вартість однієї ігрової приставки: "))
+
+# quantity = int(input("Введіть кількість приставок: "))
+
+
+# discount_percentage = float(input("Введіть відсоток знижки: "))
+# print("Виберіть операцію:")
+# print("1. Загальна сума замовлення")
+# print("2. Вартість однієї приставки з урахуванням знижки")
+# choice = input("Ваш вибір (1/2): ")
+
+# discount_multiplier = (100 - discount_percentage) / 100
+# discounted_price_console = price_console * discount_multiplier
+
+# if choice == '1':
+#     total_order_cost = discounted_price_console * quantity
+#     print(f"Загальна сума замовлення: {total_order_cost:.2f}")
+# elif choice == '2':
+#     print(f"Вартість однієї приставки з урахуванням знижки: {discounted_price_console:.2f}")
+# else:
+#     print("Невірний вибір. Будь ласка, виберіть 1 або 2.")
+
+file_size_gb = float(input("Введіть розмір файлу в гігабайтах: "))
+
+
+connection_speed_bps = float(input("Введіть швидкість інтернет-з'єднання в бітах на секунду: "))
+
+
+print("Виберіть одиницю виміру часу:")
+print("1. Години")
+print("2. Хвилини")
+print("3. Секунди")
+choice = input("Ваш вибір (1/2/3): ")
+bits_per_gb = 8 * 1024 * 1024 * 1024 
+
+
+file_size_bits = file_size_gb * bits_per_gb
+download_time_seconds = file_size_bits / connection_speed_bps
+
+if choice == '1':
+    download_time_hours = download_time_seconds / 3600
+    print(f"Час завантаження файлу: {download_time_hours:.2f} годин")
+elif choice == '2':
+    download_time_minutes = download_time_seconds / 60
+    print(f"Час завантаження файлу: {download_time_minutes:.2f} хвилин")
+elif choice == '3':
+    print(f"Час завантаження файлу: {download_time_seconds:.2f} секунд")
+else:
+    print("Невірний вибір. Будь ласка, виберіть 1, 2 або 3.")
